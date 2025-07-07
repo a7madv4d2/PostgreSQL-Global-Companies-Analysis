@@ -73,6 +73,7 @@ CREATE TABLE largest_companies (
 
 * **USA: \$1,767B**, **China: \$629B**, **Japan: \$280B**.
 
+Screenshots are provided in a separate branch.
 ---
 
 ## Advanced SQL Techniques Used
