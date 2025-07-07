@@ -1,6 +1,4 @@
 # PostgreSQL-Global-Companies-Analysis
-This is a detailed analysis of Forbes famous The Global 2000.
-# Global Companies SQL Analysis
 
 This SQL portfolio project analyzes the **world's 2000 largest global companies**, as published by **Forbes** and sourced from Kaggle: [Kaggle Dataset](https://www.kaggle.com/datasets/mohammadgharaei77/largest-2000-global-companies?resource=download). The dataset was cleaned, encoded in **UTF-8**, and restructured for compatibility with **PostgreSQL**, including proper typing for numeric and date fields.
 
