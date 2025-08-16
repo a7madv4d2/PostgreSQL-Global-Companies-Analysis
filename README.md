@@ -142,16 +142,7 @@ A polished, multi-page Power BI layer that turns the PostgreSQL outputs into boa
 - Validate a few spot-check totals against your source numbers.  
 - Use bookmarks and slicers to navigate leaders, countries, and industries.
 
-### Performance & Governance (recommended)
-- Star-schema modeling; disable auto date/time; summarize at the intended grain.  
-- Keep calculated columns minimal; prefer measures for logic.  
-- If publishing to the Service, set scheduled refresh and define dataset owners.
-
-### Files
-- `pbix/Global_2000.pbix`  
-- `docs/measures-dictionary.md`  
-- `docs/model-diagram.png`  
-- `docs/screenshots/`
+You can interact with the dashboard here: https://app.powerbi.com/links/0h0JQGy9gk?ctid=eaf624c8-a0c4-4195-87d2-443e5d7516cd&pbi_source=linkShare
 
 ---
 
