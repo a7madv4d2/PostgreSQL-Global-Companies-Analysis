@@ -1,4 +1,4 @@
-# PostgreSQL-Global-Companies-Analysis
+# PostgreSQL & Power BI -Global-Companies-Analysis
 
 This SQL portfolio project analyzes the **world's 2000 largest global companies**, as published by **Forbes** and sourced from Kaggle: [Kaggle Dataset](https://www.kaggle.com/datasets/mohammadgharaei77/largest-2000-global-companies?resource=download). The dataset was cleaned, encoded in **UTF-8**, and restructured for compatibility with **PostgreSQL**, including proper typing for numeric and date fields.
 
@@ -105,7 +105,53 @@ Screenshots are provided in a separate branch.
 * **PostgreSQL** (v15+)
 * **pgAdmin**
 * **CSV pre-processing** (encoding fixes, column normalization)
-* **Data visualization** (optional in Power BI or Tableau)
+* **Data visualization** ( Power BI )
+
+## Power BI Complement (Executive Dashboard)
+
+**Purpose**  
+A polished, multi-page Power BI layer that turns the PostgreSQL outputs into board-ready insights with ranked KPIs, %-of-global context, and clean, consistent visuals.
+
+### Pages
+1. **Snapshot** — Headline KPIs, Top-N companies by composite rank, quick compare cards.  
+2. **Geography** — Country totals with bar/line views and a **% of global** overlay; optional choropleth.  
+3. **Sector/Industry** — Leaders by industry, treemap/bars, rank and share views.  
+4. **Company** — Profile with overall rank card and a compact 3-spoke radar (Sales | Profit | Market Value) using normalized metrics.
+
+### Metric Logic (no code)
+- Independent ranks for Sales, Profit, Assets, and Market Value.  
+- **Composite ranking** by summing pillar ranks (lower = better).  
+- **% of global** KPIs for country/industry context.  
+- Min–max **normalization** for comparable radar spokes.  
+- Assets formatted in **trillions** for executive readability.
+
+### Interactivity & UX
+- Searchable slicers; single-select where appropriate.  
+- **Top-Performers** bookmark for instant leader views.  
+- Concise labels, informative tooltips, consistent number formats.  
+- Professional **dark theme** with high-contrast text and restrained accents.
+
+### Documentation Included
+- **Measure dictionary** (business names, definitions, notes).  
+- **Data model diagram** (tables, relationships, grain).  
+- Short **usage guide** (refresh steps, slicer behavior, export tips).  
+- Optional one-page KPI glossary.
+
+### How to Use
+- Open the PBIX, point sources to your PostgreSQL views (or CSVs), and refresh.  
+- Validate a few spot-check totals against your source numbers.  
+- Use bookmarks and slicers to navigate leaders, countries, and industries.
+
+### Performance & Governance (recommended)
+- Star-schema modeling; disable auto date/time; summarize at the intended grain.  
+- Keep calculated columns minimal; prefer measures for logic.  
+- If publishing to the Service, set scheduled refresh and define dataset owners.
+
+### Files
+- `pbix/Global_2000.pbix`  
+- `docs/measures-dictionary.md`  
+- `docs/model-diagram.png`  
+- `docs/screenshots/`
 
 ---
 
